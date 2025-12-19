@@ -1,0 +1,10 @@
+# requirements.txt
+# Minimal dependencies for Streamlit-based Alzheimer's Language Insight Tool
+# Compatible with Python 3.10+
+
+# Core framework
+streamlit>=1.28.0
+
+# Text analysis libraries
+textstat>=0.7.3
+nltk>=3.8.1

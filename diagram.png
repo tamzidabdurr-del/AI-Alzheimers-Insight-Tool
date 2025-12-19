@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Language Insight Tool - Architecture Diagram</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .diagram-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            color: #2d3748;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .title p {
+            margin: 10px 0 0 0;
+            color: #718096;
+            font-size: 16px;
+        }
+        
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .flow-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            min-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .flow-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+        }
+        
+        .flow-box.input {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .flow-box.ui {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .flow-box.engine {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .flow-box.output {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        
+        .flow-box.disclaimer {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+        }
+        
+        .flow-box .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .flow-box .label {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .flow-box .description {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+        
+        .arrow {
+            color: #667eea;
+            font-size: 40px;
+            font-weight: bold;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .feature-item {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            font-size: 14px;
+            color: #2d3748;
+        }
+        
+        .feature-item strong {
+            color: #667eea;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 13px;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+            color: #856404;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <div class="title">
+            <h1>🧠 AI-Powered Alzheimer's Language Insight Tool</h1>
+            <p>System Architecture & Data Flow</p>
+        </div>
+        
+        <div class="flow-container">
+            <!-- Step 1: User Input -->
+            <div class="flow-box input">
+                <div class="icon">📝</div>
+                <div class="label">1. User Input</div>
+                <div class="description">Text entry via web interface</div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Step 2: Streamlit UI -->
+            <div class="flow-box ui">
+                <div class="icon">🖥️</div>
+                <div class="label">2. Streamlit UI</div>
+                <div class="description">Interactive web application framework</div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Step 3: AI Language Analysis Engine -->
+            <div class="flow-box engine">
+                <div class="icon">🤖</div>
+                <div class="label">3. AI Language Analysis Engine</div>
+                <div class="description">NLP processing: Vocabulary, Structure, Repetition, Self-Reference</div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Step 4: Insight Output -->
+            <div class="flow-box output">
+                <div class="icon">📊</div>
+                <div class="label">4. Insight Output</div>
+                <div class="description">Metrics, visualizations, and AI-generated insights</div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Step 5: Educational Disclaimer -->
+            <div class="flow-box disclaimer">
+                <div class="icon">⚠️</div>
+                <div class="label">5. Educational Disclaimer Display</div>
+                <div class="description">Clear notice: Educational purposes only, not medical diagnosis</div>
+            </div>
+        </div>
+        
+        <!-- Features Grid -->
+        <div class="features">
+            <div class="feature-item">
+                <strong>📈 Vocabulary Variety:</strong> Lexical diversity analysis
+            </div>
+            <div class="feature-item">
+                <strong>📏 Sentence Structure:</strong> Average length metrics
+            </div>
+            <div class="feature-item">
+                <strong>🔄 Repetition Patterns:</strong> Word reuse detection
+            </div>
+            <div class="feature-item">
+                <strong>👤 Self-Reference:</strong> First-person pronoun tracking
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <strong>Technology Stack:</strong> Python • Streamlit • NLTK • TextStat
+            <br>
+            <strong>License:</strong> MIT Open Source
+        </div>
+        
+        <!-- Screenshot Instructions -->
+        <div class="instructions">
+            <strong>📸 To Save as PNG:</strong> Right-click anywhere on this diagram → "Save as image" or take a screenshot
+            <br>Recommended size: 1920x1080 for high quality
+        </div>
+    </div>
+</body>
+</html>
